@@ -1,0 +1,1587 @@
+DEBUG 2025-03-03 08:26:56.889 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 08:26:56.890 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 08:26:56.890 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 08:26:56.890 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 08:26:56.890 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 08:26:56.891 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 08:26:56.911 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 08:26:56.911 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 08:27:07.132 UTC: 	 Error while loading CRAB configuration:
+[Errno 2] No such file or directory: 'input_files.txt'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-03 08:27:07.133 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 82, in <module>
+    run_job()
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 50, in run_job
+    with open(input_list, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'input_files.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 346, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py
+Due to error:
+[Errno 2] No such file or directory: 'input_files.txt'Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 82, in <module>
+    run_job()
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 50, in run_job
+    with open(input_list, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'input_files.txt'
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 90, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Error while loading CRAB configuration:
+[Errno 2] No such file or directory: 'input_files.txt'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-03 08:27:07.138 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 08:27:59.112 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 08:27:59.112 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 08:27:59.112 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 08:27:59.112 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 08:27:59.112 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 08:27:59.112 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 08:27:59.113 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 08:27:59.113 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 08:28:39.535 UTC: 	 Keyboard Interrupted
+INFO 2025-03-03 08:28:39.539 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 08:35:22.906 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 08:35:22.906 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 08:35:22.906 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 08:35:22.906 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 08:35:22.906 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 08:35:22.906 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 08:35:22.907 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 08:35:22.907 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 08:48:09.517 UTC: 	 Keyboard Interrupted
+INFO 2025-03-03 08:48:09.522 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 08:49:02.858 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 08:49:02.859 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 08:49:02.859 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 08:49:02.859 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 08:49:02.859 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 08:49:02.859 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 08:49:02.859 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 08:49:02.860 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 08:50:00.597 UTC: 	 Keyboard Interrupted
+INFO 2025-03-03 08:50:00.600 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 08:57:45.960 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 08:57:45.960 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 08:57:45.960 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 08:57:45.960 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 08:57:45.960 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-03 08:57:45.960 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-03 08:57:45.963 UTC: 	 Error: crab_projects_run_script is not a valid CRAB project directory.
+ERROR 2025-03-03 08:57:45.963 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: crab_projects_run_script is not a valid CRAB project directory.
+INFO 2025-03-03 08:57:45.968 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 08:54:45.512 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 08:54:45.512 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 08:54:45.512 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 08:54:45.512 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 08:54:45.512 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 08:54:45.512 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 08:54:45.513 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 08:54:45.513 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 09:07:57.231 UTC: 	 Keyboard Interrupted
+INFO 2025-03-03 09:07:57.237 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 09:08:02.497 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 09:08:02.497 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 09:08:02.497 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 09:08:02.497 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 09:08:02.497 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 09:08:02.497 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 09:08:02.498 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 09:08:02.498 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 09:10:27.204 UTC: 	 Keyboard Interrupted
+INFO 2025-03-03 09:10:27.211 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 09:11:08.963 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 09:11:08.963 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 09:11:08.963 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 09:11:08.963 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 09:11:08.963 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 09:11:08.964 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 09:11:08.965 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 09:11:08.965 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 09:13:30.594 UTC: 	 Keyboard Interrupted
+INFO 2025-03-03 09:13:30.599 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 09:19:35.221 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 09:19:35.221 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 09:19:35.221 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 09:19:35.221 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 09:19:35.221 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 09:19:35.221 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 09:19:35.246 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 09:19:35.246 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 09:19:51.885 UTC: 	 Keyboard Interrupted
+INFO 2025-03-03 09:19:51.891 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 09:22:02.803 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 09:22:02.803 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 09:22:02.803 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 09:22:02.803 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 09:22:02.803 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 09:22:02.803 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 09:22:02.804 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 09:22:02.804 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 09:22:03.149 UTC: 	 Unhandled Exception!
+ERROR 2025-03-03 09:22:03.149 UTC: 	 No module named 'My_Crab'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 40, in <module>
+    subprocess.run(['ls -ltrh'])
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ls -ltrh'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 346, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py
+Due to error:
+[Errno 2] No such file or directory: 'ls -ltrh'Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 40, in <module>
+    subprocess.run(['ls -ltrh'])
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ls -ltrh'
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 85, in loadConfig
+    configmsg = "Error while loading CRAB configuration:\n%s" % (self._extractReason(configname, runErr))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 108, in _extractReason
+    modPath = find_module(cfgBaseName, cfgDirName)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 34, in find_module
+    return imp.find_module(moduleName, [moduleDir])
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 296, in find_module
+    raise ImportError(_ERR_MSG.format(name), name=name)
+ImportError: No module named 'My_Crab'
+ERROR 2025-03-03 09:22:03.152 UTC: 	 ERROR: ImportError: No module named 'My_Crab'
+ERROR 2025-03-03 09:22:03.152 UTC: 	 
+	Please email cmstalk+computing-tools@dovecotmta.cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2025-03-03 09:22:03.152 UTC: 	 	Client Version: v3.241125
+ERROR 2025-03-03 09:22:03.152 UTC: 	 	Please use 'crab uploadlog' to upload the log file /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log to the CRAB cache.
+DEBUG 2025-03-03 09:22:44.998 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 09:22:44.999 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 09:22:44.999 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 09:22:44.999 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 09:22:44.999 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 09:22:44.999 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 09:22:45.003 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 09:22:45.003 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 09:22:45.039 UTC: 	 Unhandled Exception!
+ERROR 2025-03-03 09:22:45.039 UTC: 	 No module named 'My_Crab'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 40, in <module>
+    subprocess.run(['ls -ltrh'])
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ls -ltrh'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 346, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py
+Due to error:
+[Errno 2] No such file or directory: 'ls -ltrh'Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 40, in <module>
+    subprocess.run(['ls -ltrh'])
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ls -ltrh'
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 85, in loadConfig
+    configmsg = "Error while loading CRAB configuration:\n%s" % (self._extractReason(configname, runErr))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 108, in _extractReason
+    modPath = find_module(cfgBaseName, cfgDirName)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 34, in find_module
+    return imp.find_module(moduleName, [moduleDir])
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 296, in find_module
+    raise ImportError(_ERR_MSG.format(name), name=name)
+ImportError: No module named 'My_Crab'
+ERROR 2025-03-03 09:22:45.041 UTC: 	 ERROR: ImportError: No module named 'My_Crab'
+ERROR 2025-03-03 09:22:45.041 UTC: 	 
+	Please email cmstalk+computing-tools@dovecotmta.cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2025-03-03 09:22:45.041 UTC: 	 	Client Version: v3.241125
+ERROR 2025-03-03 09:22:45.042 UTC: 	 	Please use 'crab uploadlog' to upload the log file /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log to the CRAB cache.
+DEBUG 2025-03-03 09:24:34.125 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 09:24:34.125 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 09:24:34.126 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 09:24:34.126 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 09:24:34.126 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 09:24:34.126 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 09:24:34.129 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 09:24:34.129 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 09:24:34.194 UTC: 	 Unhandled Exception!
+ERROR 2025-03-03 09:24:34.194 UTC: 	 No module named 'My_Crab'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 40, in <module>
+    subprocess.run('ls -ltrh')
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ls -ltrh'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 346, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py
+Due to error:
+[Errno 2] No such file or directory: 'ls -ltrh'Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 40, in <module>
+    subprocess.run('ls -ltrh')
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ls -ltrh'
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 85, in loadConfig
+    configmsg = "Error while loading CRAB configuration:\n%s" % (self._extractReason(configname, runErr))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 108, in _extractReason
+    modPath = find_module(cfgBaseName, cfgDirName)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 34, in find_module
+    return imp.find_module(moduleName, [moduleDir])
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 296, in find_module
+    raise ImportError(_ERR_MSG.format(name), name=name)
+ImportError: No module named 'My_Crab'
+ERROR 2025-03-03 09:24:34.195 UTC: 	 ERROR: ImportError: No module named 'My_Crab'
+ERROR 2025-03-03 09:24:34.196 UTC: 	 
+	Please email cmstalk+computing-tools@dovecotmta.cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2025-03-03 09:24:34.196 UTC: 	 	Client Version: v3.241125
+ERROR 2025-03-03 09:24:34.196 UTC: 	 	Please use 'crab uploadlog' to upload the log file /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log to the CRAB cache.
+DEBUG 2025-03-03 10:40:27.939 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 10:40:27.939 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 10:40:27.940 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 10:40:27.940 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 10:40:27.940 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 10:40:27.941 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 10:40:27.953 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 10:40:27.954 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 10:40:28.816 UTC: 	 Unhandled Exception!
+ERROR 2025-03-03 10:40:28.816 UTC: 	 No module named 'My_Crab'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 40, in <module>
+    subprocess.run('ls -ltrh')
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ls -ltrh'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 346, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py
+Due to error:
+[Errno 2] No such file or directory: 'ls -ltrh'Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/My_Crab.py", line 40, in <module>
+    subprocess.run('ls -ltrh')
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ls -ltrh'
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 85, in loadConfig
+    configmsg = "Error while loading CRAB configuration:\n%s" % (self._extractReason(configname, runErr))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 108, in _extractReason
+    modPath = find_module(cfgBaseName, cfgDirName)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 34, in find_module
+    return imp.find_module(moduleName, [moduleDir])
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 296, in find_module
+    raise ImportError(_ERR_MSG.format(name), name=name)
+ImportError: No module named 'My_Crab'
+ERROR 2025-03-03 10:40:28.818 UTC: 	 ERROR: ImportError: No module named 'My_Crab'
+ERROR 2025-03-03 10:40:28.818 UTC: 	 
+	Please email cmstalk+computing-tools@dovecotmta.cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2025-03-03 10:40:28.819 UTC: 	 	Client Version: v3.241125
+ERROR 2025-03-03 10:40:28.819 UTC: 	 	Please use 'crab uploadlog' to upload the log file /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log to the CRAB cache.
+DEBUG 2025-03-03 10:41:19.979 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 10:41:19.980 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 10:41:19.980 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 10:41:19.980 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 10:41:19.980 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 10:41:19.980 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 10:41:19.980 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 10:41:19.980 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 11:10:45.779 UTC: 	 Keyboard Interrupted
+INFO 2025-03-03 11:10:45.785 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 11:10:52.921 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 11:10:52.921 UTC: 	 Running on: Linux lxplus937.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 11:10:52.921 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 11:10:52.921 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 11:10:52.921 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 11:10:52.921 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 11:10:52.922 UTC: 	 Will use CRAB configuration file My_Crab.py
+DEBUG 2025-03-03 11:10:52.922 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-03 11:21:00.091 UTC: 	 Keyboard Interrupted
+INFO 2025-03-03 11:21:00.097 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-03 18:11:16.460 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-03 18:11:16.460 UTC: 	 Running on: Linux lxplus952.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-03 18:11:16.460 UTC: 	 Not using Singularity
+DEBUG 2025-03-03 18:11:16.460 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-03 18:11:16.460 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-03 18:11:16.460 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-03 18:11:16.461 UTC: 	 Will use CRAB configuration file mycrab.py
+DEBUG 2025-03-03 18:11:16.461 UTC: 	 Loading CRAB configuration file.
+DEBUG 2025-03-03 18:11:16.523 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2025-03-03 18:11:16.523 UTC: 	 Invalid CRAB configuration: Parameter Data.inputDBS has an invalid value ('/prod/phys03').
+Allowed values are: 'global' ('https://cmsweb.cern.ch/dbs/prod/global/DBSReader')
+                    'phys01' ('https://cmsweb.cern.ch/dbs/prod/phys01/DBSReader')
+                    'phys02' ('https://cmsweb.cern.ch/dbs/prod/phys02/DBSReader')
+                    'phys03' ('https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader')
+If Data.inputDBS would not be specified, the default 'global' ('https://cmsweb.cern.ch/dbs/prod/global/DBSReader') would be used.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-03 18:11:16.523 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter Data.inputDBS has an invalid value ('/prod/phys03').
+Allowed values are: 'global' ('https://cmsweb.cern.ch/dbs/prod/global/DBSReader')
+                    'phys01' ('https://cmsweb.cern.ch/dbs/prod/phys01/DBSReader')
+                    'phys02' ('https://cmsweb.cern.ch/dbs/prod/phys02/DBSReader')
+                    'phys03' ('https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader')
+If Data.inputDBS would not be specified, the default 'global' ('https://cmsweb.cern.ch/dbs/prod/global/DBSReader') would be used.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-03 18:11:16.530 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-04 04:12:41.603 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-04 04:12:41.603 UTC: 	 Running on: Linux lxplus952.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-04 04:12:41.603 UTC: 	 Not using Singularity
+DEBUG 2025-03-04 04:12:41.603 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-04 04:12:41.603 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-04 04:12:41.603 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-04 04:12:41.605 UTC: 	 Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250304_051125
+ERROR 2025-03-04 04:12:41.605 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 695, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 537, in loadLocalCache
+    raise ex
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 531, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CRABClient.ClientExceptions.CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250304_051125
+INFO 2025-03-04 04:12:41.610 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-04 04:39:52.204 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-04 04:39:52.205 UTC: 	 Running on: Linux lxplus952.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-04 04:39:52.205 UTC: 	 Not using Singularity
+DEBUG 2025-03-04 04:39:52.205 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-04 04:39:52.205 UTC: 	 Executing command: 'kill'
+DEBUG 2025-03-04 04:39:52.205 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-04 04:39:52.205 UTC: 	 Error: Please indicate the CRAB project directory with --dir=<project-directory>.
+ERROR 2025-03-04 04:39:52.205 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 687, in validateOptions
+    raise ex
+CRABClient.ClientExceptions.MissingOptionException: [91mError[0m: Please indicate the CRAB project directory with --dir=<project-directory>.
+INFO 2025-03-04 04:39:52.209 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-04 04:40:40.206 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-04 04:40:40.206 UTC: 	 Running on: Linux lxplus952.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-04 04:40:40.206 UTC: 	 Not using Singularity
+DEBUG 2025-03-04 04:40:40.206 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-04 04:40:40.206 UTC: 	 Executing command: 'kill'
+DEBUG 2025-03-04 04:40:40.206 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-04 04:40:40.207 UTC: 	 Error: crab_20250304_051125 is not a valid CRAB project directory.
+ERROR 2025-03-04 04:40:40.207 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: crab_20250304_051125 is not a valid CRAB project directory.
+INFO 2025-03-04 04:40:40.211 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-04 04:41:18.732 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-04 04:41:18.732 UTC: 	 Running on: Linux lxplus952.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-04 04:41:18.732 UTC: 	 Not using Singularity
+DEBUG 2025-03-04 04:41:18.732 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-04 04:41:18.732 UTC: 	 Executing command: 'kill'
+DEBUG 2025-03-04 04:41:18.732 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-04 04:41:18.733 UTC: 	 Error: /afs/cern.ch/user/b/bbapi/crab_projects/crab_20250304_051125 is not a valid CRAB project directory.
+ERROR 2025-03-04 04:41:18.733 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /afs/cern.ch/user/b/bbapi/crab_projects/crab_20250304_051125 is not a valid CRAB project directory.
+INFO 2025-03-04 04:41:18.738 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-04 05:21:18.010 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-04 05:21:18.010 UTC: 	 Running on: Linux lxplus952.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-04 05:21:18.010 UTC: 	 Not using Singularity
+DEBUG 2025-03-04 05:21:18.010 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-04 05:21:18.010 UTC: 	 Executing command: 'kill'
+DEBUG 2025-03-04 05:21:18.010 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-04 05:21:18.011 UTC: 	 Error: Please indicate the CRAB project directory with --dir=<project-directory>.
+ERROR 2025-03-04 05:21:18.011 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 687, in validateOptions
+    raise ex
+CRABClient.ClientExceptions.MissingOptionException: [91mError[0m: Please indicate the CRAB project directory with --dir=<project-directory>.
+INFO 2025-03-04 05:21:18.015 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-04 05:22:10.483 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-04 05:22:10.483 UTC: 	 Running on: Linux lxplus952.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-04 05:22:10.483 UTC: 	 Not using Singularity
+DEBUG 2025-03-04 05:22:10.483 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-04 05:22:10.483 UTC: 	 Executing command: 'kill'
+DEBUG 2025-03-04 05:22:10.483 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-04 05:22:10.484 UTC: 	 Error: /crab_projects/crab_20250304_051125 is not a valid CRAB project directory.
+ERROR 2025-03-04 05:22:10.484 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /crab_projects/crab_20250304_051125 is not a valid CRAB project directory.
+INFO 2025-03-04 05:22:10.487 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-04 05:23:17.837 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-04 05:23:17.837 UTC: 	 Running on: Linux lxplus952.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-04 05:23:17.837 UTC: 	 Not using Singularity
+DEBUG 2025-03-04 05:23:17.837 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-04 05:23:17.837 UTC: 	 Executing command: 'kill'
+DEBUG 2025-03-04 05:23:17.838 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-04 05:23:17.838 UTC: 	 Error: Please indicate the CRAB project directory with --dir=<project-directory>.
+ERROR 2025-03-04 05:23:17.838 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 687, in validateOptions
+    raise ex
+CRABClient.ClientExceptions.MissingOptionException: [91mError[0m: Please indicate the CRAB project directory with --dir=<project-directory>.
+INFO 2025-03-04 05:23:17.844 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-04 05:24:20.579 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-04 05:24:20.580 UTC: 	 Running on: Linux lxplus952.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-04 05:24:20.580 UTC: 	 Not using Singularity
+DEBUG 2025-03-04 05:24:20.580 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-04 05:24:20.580 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-04 05:24:20.580 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-04 05:24:20.581 UTC: 	 Error: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250304_051125/ is not a valid CRAB project directory.
+ERROR 2025-03-04 05:24:20.581 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250304_051125/ is not a valid CRAB project directory.
+INFO 2025-03-04 05:24:20.585 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-04 09:12:29.053 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-04 09:12:29.054 UTC: 	 Running on: Linux lxplus911.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-04 09:12:29.054 UTC: 	 Not using Singularity
+DEBUG 2025-03-04 09:12:29.054 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-04 09:12:29.054 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-04 09:12:29.055 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-04 09:12:29.075 UTC: 	 Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250304_081821
+ERROR 2025-03-04 09:12:29.075 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 695, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 537, in loadLocalCache
+    raise ex
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 531, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CRABClient.ClientExceptions.CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250304_081821
+INFO 2025-03-04 09:12:29.083 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-05 03:57:21.906 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-05 03:57:21.906 UTC: 	 Running on: Linux lxplus951.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-05 03:57:21.906 UTC: 	 Not using Singularity
+DEBUG 2025-03-05 03:57:21.906 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-05 03:57:21.906 UTC: 	 Executing command: 'kill'
+DEBUG 2025-03-05 03:57:21.906 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-05 03:57:21.907 UTC: 	 Error: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250304_132150 is not a valid CRAB project directory.
+ERROR 2025-03-05 03:57:21.907 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250304_132150 is not a valid CRAB project directory.
+INFO 2025-03-05 03:57:21.912 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-05 05:23:17.959 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-05 05:23:17.960 UTC: 	 Running on: Linux lxplus951.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-05 05:23:17.960 UTC: 	 Not using Singularity
+DEBUG 2025-03-05 05:23:17.960 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-05 05:23:17.960 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-05 05:23:17.960 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-05 05:23:17.962 UTC: 	 Error: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250305_045732 is not a valid CRAB project directory.
+ERROR 2025-03-05 05:23:17.962 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250305_045732 is not a valid CRAB project directory.
+INFO 2025-03-05 05:23:17.965 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-05 08:52:48.823 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-05 08:52:48.823 UTC: 	 Running on: Linux lxplus951.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-05 08:52:48.823 UTC: 	 Not using Singularity
+DEBUG 2025-03-05 08:52:48.823 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-05 08:52:48.823 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-05 08:52:48.825 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-05 08:52:48.839 UTC: 	 Error: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250305_065005 is not a valid CRAB project directory.
+ERROR 2025-03-05 08:52:48.839 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250305_065005 is not a valid CRAB project directory.
+INFO 2025-03-05 08:52:48.843 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-05 09:26:16.843 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-05 09:26:16.844 UTC: 	 Running on: Linux lxplus951.cern.ch 5.14.0-503.23.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jan 20 10:19:28 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-05 09:26:16.844 UTC: 	 Not using Singularity
+DEBUG 2025-03-05 09:26:16.844 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-05 09:26:16.844 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-05 09:26:16.844 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-05 09:26:16.846 UTC: 	 Error: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250305_095253 is not a valid CRAB project directory.
+ERROR 2025-03-05 09:26:16.846 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_20250305_095253 is not a valid CRAB project directory.
+INFO 2025-03-05 09:26:16.849 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-08 07:18:13.706 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-08 07:18:13.707 UTC: 	 Running on: Linux lxplus990.cern.ch 5.14.0-503.22.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Jan 15 08:02:15 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-08 07:18:13.707 UTC: 	 Not using Singularity
+DEBUG 2025-03-08 07:18:13.707 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-08 07:18:13.707 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-08 07:18:13.707 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-08 07:18:13.708 UTC: 	 Will use CRAB configuration file mycrab.py
+DEBUG 2025-03-08 07:18:13.708 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-08 07:18:13.736 UTC: 	 Error while loading CRAB configuration:
+unexpected indent (mycrab.py, line 82)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-08 07:18:13.736 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/mycrab.py", line 82
+    crabCommand('submit', config=config)
+IndentationError: unexpected indent
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 346, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/mycrab.py
+Due to error:
+unexpected indent (mycrab.py, line 82)Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 339, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/mycrab.py", line 82
+    crabCommand('submit', config=config)
+IndentationError: unexpected indent
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 90, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Error while loading CRAB configuration:
+unexpected indent (mycrab.py, line 82)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-08 07:18:13.740 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-08 09:00:31.937 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-08 09:00:31.937 UTC: 	 Running on: Linux lxplus990.cern.ch 5.14.0-503.22.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Jan 15 08:02:15 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-08 09:00:31.937 UTC: 	 Not using Singularity
+DEBUG 2025-03-08 09:00:31.937 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-08 09:00:31.937 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-08 09:00:31.937 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-08 09:00:31.938 UTC: 	 Will use CRAB configuration file tritroncrab,py
+DEBUG 2025-03-08 09:00:31.938 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-08 09:00:31.953 UTC: 	 Unhandled Exception!
+ERROR 2025-03-08 09:00:31.953 UTC: 	 No module named 'tritroncrab,py'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 337, in loadConfigurationFile
+    modPath = find_module(cfgBaseName, cfgDirName)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 34, in find_module
+    return imp.find_module(moduleName, [moduleDir])
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 296, in find_module
+    raise ImportError(_ERR_MSG.format(name), name=name)
+ImportError: No module named 'tritroncrab,py'
+ERROR 2025-03-08 09:00:31.956 UTC: 	 ERROR: ImportError: No module named 'tritroncrab,py'
+ERROR 2025-03-08 09:00:31.956 UTC: 	 
+	Please email cmstalk+computing-tools@dovecotmta.cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2025-03-08 09:00:31.956 UTC: 	 	Client Version: v3.241125
+ERROR 2025-03-08 09:00:31.956 UTC: 	 	Please use 'crab uploadlog' to upload the log file /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log to the CRAB cache.
+DEBUG 2025-03-08 09:01:16.324 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-08 09:01:16.324 UTC: 	 Running on: Linux lxplus990.cern.ch 5.14.0-503.22.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Jan 15 08:02:15 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-08 09:01:16.324 UTC: 	 Not using Singularity
+DEBUG 2025-03-08 09:01:16.324 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-08 09:01:16.324 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-08 09:01:16.324 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-08 09:01:16.325 UTC: 	 Will use CRAB configuration file tritroncrab,py
+DEBUG 2025-03-08 09:01:16.325 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-08 09:01:16.328 UTC: 	 Unhandled Exception!
+ERROR 2025-03-08 09:01:16.328 UTC: 	 No module named 'tritroncrab,py'
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/WMCore/Configuration.py", line 337, in loadConfigurationFile
+    modPath = find_module(cfgBaseName, cfgDirName)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/__init__.py", line 34, in find_module
+    return imp.find_module(moduleName, [moduleDir])
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/python3/3.9.14-8e02587b42992e07ed46b00eca9dfc3a/lib/python3.9/imp.py", line 296, in find_module
+    raise ImportError(_ERR_MSG.format(name), name=name)
+ImportError: No module named 'tritroncrab,py'
+ERROR 2025-03-08 09:01:16.330 UTC: 	 ERROR: ImportError: No module named 'tritroncrab,py'
+ERROR 2025-03-08 09:01:16.330 UTC: 	 
+	Please email cmstalk+computing-tools@dovecotmta.cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2025-03-08 09:01:16.330 UTC: 	 	Client Version: v3.241125
+ERROR 2025-03-08 09:01:16.330 UTC: 	 	Please use 'crab uploadlog' to upload the log file /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log to the CRAB cache.
+DEBUG 2025-03-08 09:04:24.366 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-08 09:04:24.366 UTC: 	 Running on: Linux lxplus990.cern.ch 5.14.0-503.22.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Jan 15 08:02:15 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-08 09:04:24.366 UTC: 	 Not using Singularity
+DEBUG 2025-03-08 09:04:24.366 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-08 09:04:24.366 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-08 09:04:24.366 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-08 09:04:24.369 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-08 09:04:24.370 UTC: 	 Loading CRAB configuration file.
+DEBUG 2025-03-08 09:04:24.374 UTC: 	 Will use CRAB plugin PRIVATEMC (i.e. will run an a MC generation job type).
+ERROR 2025-03-08 09:04:24.377 UTC: 	 Working area '/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job' already exists 
+Please change the requestName in the config file
+ERROR 2025-03-08 09:04:24.377 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job' already exists 
+Please change the requestName in the config file
+INFO 2025-03-08 09:04:24.384 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-08 09:04:42.954 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-08 09:04:42.955 UTC: 	 Running on: Linux lxplus990.cern.ch 5.14.0-503.22.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Jan 15 08:02:15 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-08 09:04:42.955 UTC: 	 Not using Singularity
+DEBUG 2025-03-08 09:04:42.955 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-08 09:04:42.955 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-08 09:04:42.955 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-08 09:04:42.956 UTC: 	 Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job
+ERROR 2025-03-08 09:04:42.956 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 695, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 537, in loadLocalCache
+    raise ex
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 531, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CRABClient.ClientExceptions.CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job
+INFO 2025-03-08 09:04:42.960 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-08 09:07:04.508 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-08 09:07:04.508 UTC: 	 Running on: Linux lxplus990.cern.ch 5.14.0-503.22.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Jan 15 08:02:15 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-08 09:07:04.508 UTC: 	 Not using Singularity
+DEBUG 2025-03-08 09:07:04.508 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-08 09:07:04.508 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-08 09:07:04.509 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-08 09:07:04.512 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-08 09:07:04.512 UTC: 	 Loading CRAB configuration file.
+DEBUG 2025-03-08 09:07:04.526 UTC: 	 Will use CRAB plugin PRIVATEMC (i.e. will run an a MC generation job type).
+ERROR 2025-03-08 09:07:04.529 UTC: 	 Working area '/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job' already exists 
+Please change the requestName in the config file
+ERROR 2025-03-08 09:07:04.529 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job' already exists 
+Please change the requestName in the config file
+INFO 2025-03-08 09:07:04.535 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-08 09:07:38.872 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-08 09:07:38.872 UTC: 	 Running on: Linux lxplus990.cern.ch 5.14.0-503.22.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Jan 15 08:02:15 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-08 09:07:38.872 UTC: 	 Not using Singularity
+DEBUG 2025-03-08 09:07:38.872 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-08 09:07:38.872 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-08 09:07:38.872 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-08 09:07:38.873 UTC: 	 Error: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job is not a valid CRAB project directory.
+ERROR 2025-03-08 09:07:38.873 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job is not a valid CRAB project directory.
+INFO 2025-03-08 09:07:38.880 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 03:40:36.308 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 03:40:36.308 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 03:40:36.308 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 03:40:36.308 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 03:40:36.308 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-10 03:40:36.309 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-10 03:40:36.387 UTC: 	 Error: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job is not a valid CRAB project directory.
+ERROR 2025-03-10 03:40:36.387 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job is not a valid CRAB project directory.
+INFO 2025-03-10 03:40:36.394 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 05:22:50.676 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 05:22:50.676 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 05:22:50.676 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 05:22:50.676 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 05:22:50.676 UTC: 	 Executing command: 'kill'
+DEBUG 2025-03-10 05:22:50.676 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-10 05:22:50.677 UTC: 	 Error: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job is not a valid CRAB project directory.
+ERROR 2025-03-10 05:22:50.677 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job is not a valid CRAB project directory.
+INFO 2025-03-10 05:22:50.680 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 05:55:50.705 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 05:55:50.705 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 05:55:50.705 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 05:55:50.705 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 05:55:50.705 UTC: 	 Executing command: 'kill'
+DEBUG 2025-03-10 05:55:50.705 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-03-10 05:55:50.706 UTC: 	 Error: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job is not a valid CRAB project directory.
+ERROR 2025-03-10 05:55:50.706 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects/crab_triton_server_job is not a valid CRAB project directory.
+INFO 2025-03-10 05:55:50.711 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 09:16:56.804 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 09:16:56.804 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 09:16:56.804 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 09:16:56.804 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 09:16:56.805 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-10 09:16:56.805 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-10 09:16:56.819 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-10 09:16:56.819 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-10 09:16:56.875 UTC: 	 Invalid CRAB configuration: Parameter JobType.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-10 09:16:56.875 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter JobType.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-10 09:16:56.878 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 09:22:17.483 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 09:22:17.483 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 09:22:17.483 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 09:22:17.483 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 09:22:17.483 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-10 09:22:17.483 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-10 09:22:17.484 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-10 09:22:17.484 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-10 09:22:17.734 UTC: 	 Invalid CRAB configuration: Parameter Data.maxRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-10 09:22:17.734 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter Data.maxRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-10 09:22:17.737 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 09:23:12.144 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 09:23:12.144 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 09:23:12.145 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 09:23:12.145 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 09:23:12.145 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-10 09:23:12.145 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-10 09:23:12.145 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-10 09:23:12.145 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-10 09:23:12.244 UTC: 	 Invalid CRAB configuration: Parameter Data.failureLimit is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-10 09:23:12.244 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter Data.failureLimit is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-10 09:23:12.248 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 10:43:54.790 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 10:43:54.790 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 10:43:54.790 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 10:43:54.790 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 10:43:54.790 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-10 10:43:54.790 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-10 10:43:54.791 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-10 10:43:54.791 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-10 10:43:54.827 UTC: 	 Invalid CRAB configuration: Parameter General.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-10 10:43:54.827 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter General.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-10 10:43:54.837 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 10:45:07.720 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 10:45:07.721 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 10:45:07.721 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 10:45:07.721 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 10:45:07.721 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-10 10:45:07.721 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-10 10:45:07.722 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-10 10:45:07.722 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-10 10:45:07.768 UTC: 	 Invalid CRAB configuration: Parameter Site.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-10 10:45:07.768 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter Site.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-10 10:45:07.775 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 10:45:30.241 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 10:45:30.241 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 10:45:30.241 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 10:45:30.241 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 10:45:30.241 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-10 10:45:30.241 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-10 10:45:30.242 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-10 10:45:30.242 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-10 10:45:30.863 UTC: 	 Invalid CRAB configuration: Parameter User.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-10 10:45:30.863 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter User.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-10 10:45:30.867 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 10:45:54.594 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 10:45:54.594 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 10:45:54.594 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 10:45:54.594 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 10:45:54.594 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-10 10:45:54.594 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-10 10:45:54.595 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-10 10:45:54.595 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-10 10:45:54.626 UTC: 	 Invalid CRAB configuration: Parameter Debug.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-10 10:45:54.626 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter Debug.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-10 10:45:54.632 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 10:46:17.721 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 10:46:17.721 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 10:46:17.721 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 10:46:17.721 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 10:46:17.721 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-10 10:46:17.721 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-10 10:46:17.722 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-10 10:46:17.722 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-10 10:46:17.748 UTC: 	 Invalid CRAB configuration: Parameter General.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-10 10:46:17.748 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter General.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-10 10:46:17.751 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 10:46:41.174 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 10:46:41.174 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 10:46:41.174 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 10:46:41.174 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 10:46:41.174 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-10 10:46:41.175 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-10 10:46:41.175 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-10 10:46:41.176 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-10 10:46:41.242 UTC: 	 Invalid CRAB configuration: Parameter JobType.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-10 10:46:41.242 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter JobType.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-10 10:46:41.247 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-03-10 10:47:00.499 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-03-10 10:47:00.499 UTC: 	 Running on: Linux lxplus984.cern.ch 5.14.0-503.26.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Feb 10 05:23:56 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-10 10:47:00.499 UTC: 	 Not using Singularity
+DEBUG 2025-03-10 10:47:00.499 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-03-10 10:47:00.499 UTC: 	 Executing command: 'submit'
+DEBUG 2025-03-10 10:47:00.500 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-03-10 10:47:00.500 UTC: 	 Will use CRAB configuration file tritroncrab.py
+DEBUG 2025-03-10 10:47:00.501 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-03-10 10:47:00.578 UTC: 	 Invalid CRAB configuration: Parameter Data.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-03-10 10:47:00.578 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.241125.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter Data.maxJobRetries is not known.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-03-10 10:47:00.581 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-05-12 15:11:57.160 UTC: 	 CRAB Client version: v3.250409
+DEBUG 2025-05-12 15:11:57.161 UTC: 	 Running on: Linux lxplus913.cern.ch 5.14.0-503.40.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 24 08:27:29 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-05-12 15:11:57.161 UTC: 	 Not using Singularity
+DEBUG 2025-05-12 15:11:57.161 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-05-12 15:11:57.161 UTC: 	 Executing command: 'submit'
+DEBUG 2025-05-12 15:11:57.161 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+INFO 2025-05-12 15:11:57.166 UTC: 	 Will use CRAB configuration file CRABJOB_DRN.py
+DEBUG 2025-05-12 15:11:57.167 UTC: 	 Loading CRAB configuration file.
+DEBUG 2025-05-12 15:11:57.200 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2025-05-12 15:11:57.200 UTC: 	 Invalid CRAB configuration: A local DBS instance 'phys03' was specified for reading an input dataset of tier AODSIM.
+Datasets of tier different than USER must be read from the global DBS instance; this is, set Data.inputDBS = 'global'.
+If Data.inputDBS would not be specified, the default 'global' ('https://cmsweb.cern.ch/dbs/prod/global/DBSReader') would be used.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-05-12 15:11:57.200 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: A local DBS instance 'phys03' was specified for reading an input dataset of tier AODSIM.
+Datasets of tier different than USER must be read from the global DBS instance; this is, set Data.inputDBS = 'global'.
+If Data.inputDBS would not be specified, the default 'global' ('https://cmsweb.cern.ch/dbs/prod/global/DBSReader') would be used.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-05-12 15:11:57.210 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-05-12 17:38:53.848 UTC: 	 CRAB Client version: v3.250409
+DEBUG 2025-05-12 17:38:53.848 UTC: 	 Running on: Linux lxplus913.cern.ch 5.14.0-503.40.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 24 08:27:29 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-05-12 17:38:53.848 UTC: 	 Not using Singularity
+DEBUG 2025-05-12 17:38:53.848 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-05-12 17:38:53.848 UTC: 	 Executing command: 'kill'
+DEBUG 2025-05-12 17:38:53.848 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-05-12 17:38:53.849 UTC: 	 Error: Please indicate the CRAB project directory with --dir=<project-directory>.
+ERROR 2025-05-12 17:38:53.849 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 687, in validateOptions
+    raise ex
+CRABClient.ClientExceptions.MissingOptionException: [91mError[0m: Please indicate the CRAB project directory with --dir=<project-directory>.
+INFO 2025-05-12 17:38:53.853 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-05-12 17:39:05.857 UTC: 	 CRAB Client version: v3.250409
+DEBUG 2025-05-12 17:39:05.857 UTC: 	 Running on: Linux lxplus913.cern.ch 5.14.0-503.40.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 24 08:27:29 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-05-12 17:39:05.857 UTC: 	 Not using Singularity
+DEBUG 2025-05-12 17:39:05.857 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-05-12 17:39:05.857 UTC: 	 Executing command: 'kill'
+DEBUG 2025-05-12 17:39:05.857 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-05-12 17:39:05.861 UTC: 	 Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects_new
+ERROR 2025-05-12 17:39:05.861 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 695, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 537, in loadLocalCache
+    raise ex
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 531, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CRABClient.ClientExceptions.CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects_new
+INFO 2025-05-12 17:39:05.865 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-05-12 17:39:58.371 UTC: 	 CRAB Client version: v3.250409
+DEBUG 2025-05-12 17:39:58.371 UTC: 	 Running on: Linux lxplus913.cern.ch 5.14.0-503.40.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 24 08:27:29 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-05-12 17:39:58.371 UTC: 	 Not using Singularity
+DEBUG 2025-05-12 17:39:58.371 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-05-12 17:39:58.371 UTC: 	 Executing command: 'kill'
+DEBUG 2025-05-12 17:39:58.372 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-05-12 17:39:58.372 UTC: 	 Error: crab_20250512_190122 is not a valid CRAB project directory.
+ERROR 2025-05-12 17:39:58.372 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: crab_20250512_190122 is not a valid CRAB project directory.
+INFO 2025-05-12 17:39:58.376 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-05-12 17:40:46.946 UTC: 	 CRAB Client version: v3.250409
+DEBUG 2025-05-12 17:40:46.946 UTC: 	 Running on: Linux lxplus913.cern.ch 5.14.0-503.40.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 24 08:27:29 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-05-12 17:40:46.946 UTC: 	 Not using Singularity
+DEBUG 2025-05-12 17:40:46.946 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-05-12 17:40:46.946 UTC: 	 Executing command: 'kill'
+DEBUG 2025-05-12 17:40:46.947 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-05-12 17:40:46.947 UTC: 	 Error: Please indicate the CRAB project directory with --dir=<project-directory>.
+ERROR 2025-05-12 17:40:46.947 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 687, in validateOptions
+    raise ex
+CRABClient.ClientExceptions.MissingOptionException: [91mError[0m: Please indicate the CRAB project directory with --dir=<project-directory>.
+INFO 2025-05-12 17:40:46.952 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-05-12 17:41:01.739 UTC: 	 CRAB Client version: v3.250409
+DEBUG 2025-05-12 17:41:01.740 UTC: 	 Running on: Linux lxplus913.cern.ch 5.14.0-503.40.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 24 08:27:29 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-05-12 17:41:01.740 UTC: 	 Not using Singularity
+DEBUG 2025-05-12 17:41:01.740 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-05-12 17:41:01.740 UTC: 	 Executing command: 'kill'
+DEBUG 2025-05-12 17:41:01.740 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-05-12 17:41:01.741 UTC: 	 Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects_new
+ERROR 2025-05-12 17:41:01.741 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 695, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 537, in loadLocalCache
+    raise ex
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 531, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CRABClient.ClientExceptions.CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects_new
+INFO 2025-05-12 17:41:01.745 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log
+DEBUG 2025-05-12 17:41:36.927 UTC: 	 CRAB Client version: v3.250409
+DEBUG 2025-05-12 17:41:36.927 UTC: 	 Running on: Linux lxplus913.cern.ch 5.14.0-503.40.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr 24 08:27:29 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-05-12 17:41:36.927 UTC: 	 Not using Singularity
+DEBUG 2025-05-12 17:41:36.927 UTC: 	 Operating System: Red Hat Enterprise Linux 9.5 (Plow)
+DEBUG 2025-05-12 17:41:36.927 UTC: 	 Executing command: 'kill'
+DEBUG 2025-05-12 17:41:36.927 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bbapi/.crab3
+ERROR 2025-05-12 17:41:36.928 UTC: 	 Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects_new
+ERROR 2025-05-12 17:41:36.928 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 695, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 537, in loadLocalCache
+    raise ex
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/Commands/SubCommand.py", line 531, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250409.00/lib/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CRABClient.ClientExceptions.CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab_projects_new
+INFO 2025-05-12 17:41:36.931 UTC: 	 Log file is /eos/home-b/bbapi/Energy_regression/CMSSW_13_3_3/src/crab.log

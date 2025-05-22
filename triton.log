@@ -1,0 +1,59 @@
+W0522 15:59:52.379950 1181901 pinned_memory_manager.cc:236] Unable to allocate pinned system memory, pinned memory pool will not be available: CUDA driver version is insufficient for CUDA runtime version
+I0522 15:59:52.380651 1181901 cuda_memory_manager.cc:115] CUDA memory pool disabled
+I0522 15:59:52.402688 1181901 model_repository_manager.cc:1206] loading: photonObjectCombined:1
+WARNING: [Torch-TensorRT] - Unable to read CUDA capable devices. Return status: 35
+I0522 15:59:57.306979 1181901 libtorch.cc:1917] TRITONBACKEND_Initialize: pytorch
+I0522 15:59:57.307258 1181901 libtorch.cc:1927] Triton TRITONBACKEND API version: 1.10
+I0522 15:59:57.307553 1181901 libtorch.cc:1933] 'pytorch' TRITONBACKEND API version: 1.10
+I0522 15:59:57.307841 1181901 libtorch.cc:1966] TRITONBACKEND_ModelInitialize: photonObjectCombined (version 1)
+W0522 15:59:57.309209 1181901 libtorch.cc:262] skipping model configuration auto-complete for 'photonObjectCombined': not supported for pytorch backend
+I0522 15:59:57.309899 1181901 libtorch.cc:291] Optimized execution is enabled for model instance 'photonObjectCombined'
+I0522 15:59:57.310104 1181901 libtorch.cc:310] Cache Cleaning is disabled for model instance 'photonObjectCombined'
+I0522 15:59:57.310323 1181901 libtorch.cc:327] Inference Mode is disabled for model instance 'photonObjectCombined'
+I0522 15:59:57.310513 1181901 libtorch.cc:422] NvFuser is not specified for model instance 'photonObjectCombined'
+I0522 15:59:57.310749 1181901 libtorch.cc:2010] TRITONBACKEND_ModelInstanceInitialize: photonObjectCombined (CPU device 0)
+I0522 15:59:57.730653 1181901 model_repository_manager.cc:1352] successfully loaded 'photonObjectCombined' version 1
+I0522 15:59:57.731364 1181901 server.cc:559] 
++------------------+----------------------------------------------------------------------+
+| Repository Agent | Path                                                                 |
++------------------+----------------------------------------------------------------------+
+| checksum         | /opt/tritonserver/repoagents/checksum/libtritonrepoagent_checksum.so |
++------------------+----------------------------------------------------------------------+
+
+I0522 15:59:57.732004 1181901 server.cc:586] 
++---------+---------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Backend | Path                                                    | Config                                                                                                                                                        |
++---------+---------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pytorch | /opt/tritonserver/backends/pytorch/libtriton_pytorch.so | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
++---------+---------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0522 15:59:57.732600 1181901 server.cc:629] 
++----------------------+---------+--------+
+| Model                | Version | Status |
++----------------------+---------+--------+
+| photonObjectCombined | 1       | READY  |
++----------------------+---------+--------+
+
+Error: Failed to initialize NVML
+W0522 15:59:57.741038 1181901 metrics.cc:571] DCGM unable to start: DCGM initialization error
+I0522 15:59:57.741854 1181901 tritonserver.cc:2176] 
++----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Option                           | Value                                                                                                                                                                                        |
++----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_id                        | triton                                                                                                                                                                                       |
+| server_version                   | 2.24.0                                                                                                                                                                                       |
+| server_extensions                | classification sequence model_repository model_repository(unload_dependents) schedule_policy model_configuration system_shared_memory cuda_shared_memory binary_tensor_data statistics trace |
+| model_repository_path[0]         | /tmp/models                                                                                                                                                                                  |
+| model_control_mode               | MODE_NONE                                                                                                                                                                                    |
+| strict_model_config              | 0                                                                                                                                                                                            |
+| rate_limit                       | OFF                                                                                                                                                                                          |
+| pinned_memory_pool_byte_size     | 268435456                                                                                                                                                                                    |
+| response_cache_byte_size         | 0                                                                                                                                                                                            |
+| min_supported_compute_capability | 6.0                                                                                                                                                                                          |
+| strict_readiness                 | 1                                                                                                                                                                                            |
+| exit_timeout                     | 30                                                                                                                                                                                           |
++----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0522 15:59:57.747960 1181901 grpc_server.cc:4608] Started GRPCInferenceService at 0.0.0.0:9001
+I0522 15:59:57.749631 1181901 http_server.cc:3312] Started HTTPService at 0.0.0.0:9000
+I0522 15:59:57.809011 1181901 http_server.cc:178] Started Metrics Service at 0.0.0.0:9002
