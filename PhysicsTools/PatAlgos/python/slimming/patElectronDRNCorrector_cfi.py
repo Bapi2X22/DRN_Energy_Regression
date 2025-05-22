@@ -1,15 +1,15 @@
 import FWCore.ParameterSet.Config as cms
 
-from RecoEgamma.EgammaTools.patElectronDRNCorrectionProducer_cfi import patElectronDRNCorrectionProducer
+from RecoEgamma.EgammaTools.gsfElectronDRNCorrectionProducer_cfi import gsfElectronDRNCorrectionProducer
 
-patElectronsDRN = patElectronDRNCorrectionProducer.clone(
-                            particleSource = 'selectedPatElectrons',
+patElectronsDRN = gsfElectronDRNCorrectionProducer.clone(
+                            particleSource = 'gedGsfElectrons',
                             rhoName = 'fixedGridRhoFastjetAll',
-                            Client = patElectronDRNCorrectionProducer.Client.clone(
+                            Client = gsfElectronDRNCorrectionProducer.Client.clone(
                               mode = 'Async',
                               allowedTries = 1,
-                              modelName = 'electronObjectEnsemble',
-                              modelConfigPath = 'RecoEgamma/EgammaElectronProducers/data/models/electronObjectEnsemble/config.pbtxt',
+                              modelName = 'photonObjectCombined',
+                              modelConfigPath = 'RecoEgamma/EgammaElectronProducers/data/models/photonObjectCombined/config.pbtxt',
                               timeout = 10
                             )
     )

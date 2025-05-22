@@ -383,6 +383,8 @@ void DRNCorrectionProducerT<T>::produce(edm::Event& iEvent, const edm::EventSetu
         rawE = part.superCluster()->rawEnergy();
         Epred = mu * rawE;
         sigmaPred = sigma * rawE;
+      //  std::cout <<"The raw energy is: " << rawE<< std::endl;
+//	std::cout <<"The predicted energy is: " << Epred<< std::endl;
         corrections.emplace_back(Epred, sigmaPred);
       } else {
         corrections.emplace_back(-1.0f, -1.0f);
@@ -414,13 +416,22 @@ void DRNCorrectionProducerT<T>::fillDescriptions(edm::ConfigurationDescriptions&
 //reco:: template instances are supported
 //uncomment the lines below to enable them
 
-//using GsfElectronDRNCorrectionProducer = DRNCorrectionProducerT<reco::GsfElectron>;
-//using GedPhotonDRNCorrectionProducer = DRNCorrectionProducerT<reco::Photon>;
-//DEFINE_FWK_MODULE(GedPhotonDRNCorrectionProducer);
-//DEFINE_FWK_MODULE(GsfElectronDRNCorrectionProducer);
+using GsfElectronDRNCorrectionProducer = DRNCorrectionProducerT<reco::GsfElectron>;
+using GedPhotonDRNCorrectionProducer = DRNCorrectionProducerT<reco::Photon>;
+DEFINE_FWK_MODULE(GedPhotonDRNCorrectionProducer);
+DEFINE_FWK_MODULE(GsfElectronDRNCorrectionProducer);
 
-using PatElectronDRNCorrectionProducer = DRNCorrectionProducerT<pat::Electron>;
-using PatPhotonDRNCorrectionProducer = DRNCorrectionProducerT<pat::Photon>;
+//using PatElectronDRNCorrectionProducer = DRNCorrectionProducerT<pat::Electron>;
+//using PatPhotonDRNCorrectionProducer = DRNCorrectionProducerT<pat::Photon>;
 
-DEFINE_FWK_MODULE(PatPhotonDRNCorrectionProducer);
-DEFINE_FWK_MODULE(PatElectronDRNCorrectionProducer);
+//DEFINE_FWK_MODULE(PatPhotonDRNCorrectionProducer);
+//DEFINE_FWK_MODULE(PatElectronDRNCorrectionProducer);
+
+
+#include <iostream>
+struct AutoPrint {
+    AutoPrint() {
+        std::cout << "Running DRNCorrectionProducerT.cc" << std::endl;
+    }
+};
+AutoPrint M1;

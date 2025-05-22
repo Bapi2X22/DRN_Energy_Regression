@@ -1,0 +1,112 @@
+universe      = vanilla
+executable    = run_batch.sh
+output        = logs/job_$(Process).out
+error         = logs/job_$(Process).err
+log           = logs/job_$(Process).log
+should_transfer_files = YES
+request_memory = 3.0 GB
++MaxRuntime = 6*24*60*60
+use_x509userproxy = True
+x509userproxy =  /afs/cern.ch/user/b/bbapi/x509up_u177868
+
++SingularityBind = "/cvmfs/unpacked.cern.ch/registry.hub.docker.com/fastml"
++SingularityBindCVMFS = True
+
+environment = "HOME=/afs/cern.ch/user/b/bbapi XrdSecPROTOCOL=gsi,unix"
+
+when_to_transfer_output = ON_EXIT_OR_EVICT
+
+request_cpus =$(DETECTED_CORES)
+
+arguments = batch_jobs/job_0.txt
+queue
+arguments = batch_jobs/job_1.txt
+queue
+arguments = batch_jobs/job_10.txt
+queue
+arguments = batch_jobs/job_11.txt
+queue
+arguments = batch_jobs/job_12.txt
+queue
+arguments = batch_jobs/job_13.txt
+queue
+arguments = batch_jobs/job_14.txt
+queue
+arguments = batch_jobs/job_15.txt
+queue
+arguments = batch_jobs/job_16.txt
+queue
+arguments = batch_jobs/job_17.txt
+queue
+arguments = batch_jobs/job_18.txt
+queue
+arguments = batch_jobs/job_19.txt
+queue
+arguments = batch_jobs/job_2.txt
+queue
+arguments = batch_jobs/job_20.txt
+queue
+arguments = batch_jobs/job_21.txt
+queue
+arguments = batch_jobs/job_22.txt
+queue
+arguments = batch_jobs/job_23.txt
+queue
+arguments = batch_jobs/job_24.txt
+queue
+arguments = batch_jobs/job_25.txt
+queue
+arguments = batch_jobs/job_26.txt
+queue
+arguments = batch_jobs/job_27.txt
+queue
+arguments = batch_jobs/job_28.txt
+queue
+arguments = batch_jobs/job_29.txt
+queue
+arguments = batch_jobs/job_3.txt
+queue
+arguments = batch_jobs/job_30.txt
+queue
+arguments = batch_jobs/job_31.txt
+queue
+arguments = batch_jobs/job_32.txt
+queue
+arguments = batch_jobs/job_33.txt
+queue
+arguments = batch_jobs/job_34.txt
+queue
+arguments = batch_jobs/job_35.txt
+queue
+arguments = batch_jobs/job_36.txt
+queue
+arguments = batch_jobs/job_37.txt
+queue
+arguments = batch_jobs/job_38.txt
+queue
+arguments = batch_jobs/job_39.txt
+queue
+arguments = batch_jobs/job_4.txt
+queue
+arguments = batch_jobs/job_40.txt
+queue
+arguments = batch_jobs/job_41.txt
+queue
+arguments = batch_jobs/job_42.txt
+queue
+arguments = batch_jobs/job_43.txt
+queue
+arguments = batch_jobs/job_44.txt
+queue
+arguments = batch_jobs/job_45.txt
+queue
+arguments = batch_jobs/job_5.txt
+queue
+arguments = batch_jobs/job_6.txt
+queue
+arguments = batch_jobs/job_7.txt
+queue
+arguments = batch_jobs/job_8.txt
+queue
+arguments = batch_jobs/job_9.txt
+queue

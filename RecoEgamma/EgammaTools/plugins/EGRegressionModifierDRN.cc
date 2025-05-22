@@ -216,3 +216,10 @@ const std::pair<float, float> EGRegressionModifierDRN::partVars<T>::getCorrectio
 }
 
 DEFINE_EDM_PLUGIN(ModifyObjectValueFactory, EGRegressionModifierDRN, "EGRegressionModifierDRN");
+#include <iostream>
+struct AutoPrint2 {
+    AutoPrint2() { 
+    std::cout<<"Running EGRegressionModifierDRN.cc"<<std::endl;
+    }
+};
+AutoPrint2 M2;

@@ -9,6 +9,12 @@ __init__.py
 # ignore partially applied patches and their backup
 *.rej
 *.orig
+*.root
+*.pdf
+*.png
+*.tgz
+*.log
+*.txt
 
 # ignore files under the top level $CMSSW_BASE/src directory, but not its subdirectories
 /*

@@ -1,6 +1,7 @@
-import FWCore.ParameterSet.Config as cms 
-from RecoEgamma.EgammaTools.patPhotonDRNCorrectionProducer_cfi import patPhotonDRNCorrectionProducer
+import FWCore.ParameterSet.Config as cms
 
+from RecoEgamma.EgammaTools.patPhotonDRNCorrectionProducer_cfi import patPhotonDRNCorrectionProducer
+print("Started patPhotonsDRN module")
 patPhotonsDRN = patPhotonDRNCorrectionProducer.clone(
                             particleSource = 'selectedPatPhotons',
                             rhoName = 'fixedGridRhoFastjetAll',
@@ -12,3 +13,7 @@ patPhotonsDRN = patPhotonDRNCorrectionProducer.clone(
                               timeout = 10
                             )
     )
+import os
+full_model_config_path = os.popen('edmFileInPath RecoEgamma/EgammaPhotonProducers/data/models/photonObjectCombined/config.pbtxt').read().strip()
+
+print("Full Model Config Path:", full_model_config_path)
